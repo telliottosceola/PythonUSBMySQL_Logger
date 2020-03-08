@@ -487,6 +487,13 @@ def sensor_types():
 					'counts': reduce(msbLsb, d[0:2])
 			}
 		},
+        # untested
+		'34': {
+			'name': 'Tank Level',
+			'parse': lambda d :	{
+					'distance': reduce(msbLsb, d[0:2])
+			}
+		},
         # check
         '36': {
             'name': "Two Channel Counter",
